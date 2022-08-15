@@ -1,4 +1,5 @@
 const body = document.body;
+var clicked = 0;
         
 var sudoku = [
     [4, 0, 9, 0, 0, 8, 0, 3, 0],
@@ -27,14 +28,19 @@ function tableCreate() {
 }
 
 tableCreate();
-display(sudoku);
+display(sudoku, clicked);
     
 function display(s) {
     for(let i = 0; i < s.length; i++) {
         for(let j = 0; j < s[0].length; j++) {
-            setTimeout(() => {
+            if(clicked == 1) {
+                setTimeout(() => {
+                    print(s, i, j);
+                }, 900 * i + 100 * j);
+            }
+            else {
                 print(s, i, j);
-            }, 900 * i + 100 * j);
+            }
         }
     }
 }
@@ -47,8 +53,6 @@ function print(s, i, j) {
     }
     cell.innerHTML = sudoku[i][j];
 }
-
-var clicked = 0;
 
 function solveSudoku(s) {
     if(clicked == 0) {
