@@ -4,6 +4,12 @@ body {
     font-size: 1.5em;
 }
 
+div {
+    float: left;
+    width: 50%;
+    text-align: center;
+}
+
 h1 {
     text-align: center;
     color: #dddddd;
@@ -17,7 +23,6 @@ table {
 td {
     border: none;
     margin: auto;
-    /* padding: 10px 14px 10px 14px; */
     background-color: #dddddd;
     border-radius: 6px;
     text-align: center;
@@ -26,9 +31,28 @@ td {
 }
 
 .buttons {
-    display: flex;
+    width: 40%;
 }
 
 button {
-    justify-content: center;
+    font-size: 30px;
+    color: #ffffff;
+    width: 40%;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 6px;
+    background-color: #f97046;
+    box-shadow: 0 9px #222;
+    cursor: pointer;
+}
+p {
+color: #74635e
+}
+button:hover {
+    background-color: #f44b17;
+}
+
+button:active {
+    box-shadow: 0 4px #111;
+    transform: translateY(4px);
 }

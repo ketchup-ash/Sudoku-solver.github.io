@@ -1,4 +1,5 @@
 const body = document.body;
+const tableDiv = document.getElementById('table');
 var clicked = 0;
         
 var sudoku = [
@@ -24,7 +25,7 @@ function tableCreate() {
             td.setAttribute('id', ''+i+''+j)
         }
     }
-    body.appendChild(tbl);
+    tableDiv.appendChild(tbl);
 }
 
 tableCreate();
@@ -57,7 +58,10 @@ function print(s, i, j) {
 function solveSudoku(s) {
     if(clicked == 0) {
         clicked = 1;
-        document.getElementById('btn').disabled = true;
+        document.getElementById('button').disabled = true;
+        document.getElementById('button').style.backgroundColor = "#74635e";
+        document.getElementById('button').style.boxShadow = '0 4px #111';
+        document.getElementById('button').style.transform = 'translateY(4px)';
     }
     for(let i = 0; i < s.length; i++) {
         for(let j = 0; j < s[0].length; j++) {
