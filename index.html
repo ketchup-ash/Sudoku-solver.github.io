@@ -9,21 +9,23 @@
     <link href="https://fonts.googleapis.com/css2?family=DynaPuff&display=swap" rel="stylesheet">
     
     <link rel="stylesheet" href="Test3Css.css">
+
+    <script src="Test3Js.js" defer></script>
 </head>
 
 <body>
     <h1>Sudoku Solver</h1>
 
     <div id="table">
-        <script src="Test3Js.js"></script>
+        
     </div>
 
     <div id="buttons">
-        <button id="button" onclick="solveSudoku(sudoku)">Solve</button>
+        <button type="button" id="button1" onclick="solved = solveSudoku(sudoku)">Solve</button>
         <br>
-        <button>Unused</button>
+        <button onclick="change(this)">Sudoku 1</button>
         <br>
-        <button>Unused</button>
+        <button onclick="change(this)">Sudoku 2</button>
         <br>
         <button>Unused</button>
     </div>
